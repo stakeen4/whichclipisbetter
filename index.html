@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melyik klip jobb? | twitch.tv/stakeen4</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#150f2b;--surface:#221a45;--line:#3a2f6b;--text:#f4f0ff;--muted:#a79fcf;--accent:#ffd23f;--ink:#150f2b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.4;padding-bottom:70px}
+main{max-width:1700px;margin:0 auto;padding:20px 20px}
+[hidden]{display:none!important}
+h1{font-size:clamp(2.4rem,8vw,5.5rem);font-weight:800;letter-spacing:-.03em;line-height:1;margin:0 0 14px}
+h2{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;margin:0 0 6px}
+.sub{color:var(--muted);font-size:1.1rem;max-width:46ch;margin:0 0 28px}
+button{font-family:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.go{background:var(--accent);color:var(--ink);border:0;border-radius:18px;padding:22px 54px;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800}
+.go:hover:not(:disabled){filter:brightness(1.08)}
+.go:disabled{opacity:.5;cursor:default}
+.note{color:var(--muted);margin:14px 0 0;min-height:1.4em}
+#start{padding:6vh 0 4vh}
+.top{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:10px;font-weight:600}
+.prog{height:8px;background:var(--surface);border-radius:8px;overflow:hidden;margin-bottom:20px}
+.prog span{display:block;height:100%;width:0;background:var(--accent);transition:width .3s}
+.arena{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center}
+.card{background:var(--surface);border:2px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,transform .2s,opacity .2s}
+.card.won{border-color:var(--accent);transform:scale(1.02)}
+.card.lost{opacity:.4}
+.player{aspect-ratio:16/9;background:#000}
+.player iframe{width:100%;height:100%;border:0;display:block}
+.meta{padding:14px 16px 4px}
+.title{font-weight:600;font-size:1.05rem;margin:0 0 4px;overflow-wrap:anywhere}
+.info{color:var(--muted);font-size:.92rem;margin:0}
+.pick{margin:12px 16px 16px;padding:14px;border:0;border-radius:12px;background:var(--accent);color:var(--ink);font-weight:800;font-size:1.1rem}
+.pick:hover:not(:disabled){filter:brightness(1.08)}
+.pick:disabled{cursor:default}
+.vs{width:56px;height:56px;border-radius:50%;background:var(--accent);color:var(--ink);display:grid;place-items:center;font-weight:800;font-size:1.4rem}
+.skip{margin-top:18px;background:none;border:2px solid var(--line);color:var(--text);border-radius:10px;padding:9px 16px;font-weight:600}
+.skip:hover{border-color:var(--muted)}
+.credit{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--surface);border-top:2px solid var(--line);padding:12px 18px;text-align:center;font-size:.95rem;color:var(--muted)}
+.credit a{color:var(--accent);font-weight:800;text-decoration:none}
+.credit a:hover{text-decoration:underline}
+@media (max-width:1000px){.arena{grid-template-columns:1fr;gap:10px}.vs{width:52px;height:52px;font-size:1.1rem;justify-self:center}}
+@media (max-width:760px){.go{width:100%;padding:20px}}
+@media (prefers-reduced-motion:reduce){.card,.prog span{transition:none}}
+</style>
+</head>
+<body>
+<main>
+  <section id="start">
+    <h1>Melyik klip jobb?</h1>
+    <p class="sub">10 párbaj a legnézettebb magyar Twitch klipekből. Minden párbajban válaszd ki azt, amelyik jobban tetszik.</p>
+    <button class="go" id="go" type="button" disabled>Indítás</button>
+    <p class="note" id="note">Klipek betöltése…</p>
+  </section>
+
+  <section id="game" hidden>
+    <div class="top"><span id="label"></span></div>
+    <div class="prog"><span id="bar"></span></div>
+    <div class="arena" id="arena"></div>
+    <button class="skip" id="skip" type="button">Új páros</button>
+  </section>
+
+  <section id="end" hidden>
+    <h2>Kész!</h2>
+    <p class="sub">Köszi, hogy játszottál. Jöhet még egy kör?</p>
+    <button class="go" id="again" type="button">Új kör</button>
+  </section>
+</main>
+
+<div class="credit">Készítette: <a href="https://twitch.tv/stakeen4" target="_blank" rel="noopener">twitch.tv/stakeen4</a></div>
+
+<script>
+const ROUND = 10;
+const TOP_POOL = 30;        // ennyi legnezettebb klipből kerül ki a kör 2 híres klipje
+const MAX_PER_STREAMER = 3;  // egy korben egy streamer legfeljebb ennyiszer szerepelhet
+const $ = id => document.getElementById(id);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+let clips = [], pairs = [], spare = [], topSpare = [], counts = {}, idx = 0, locked = false;
+
+function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+
+function drawPair(pool, cap) {
+  const ok = c => (counts[c.broadcaster_id] || 0) < cap;
+  let i = pool.length - 1;
+  while (i >= 0 && !ok(pool[i])) i--;
+  if (i < 0) return null;
+  const a = pool.splice(i, 1)[0];
+  counts[a.broadcaster_id] = (counts[a.broadcaster_id] || 0) + 1;
+  let j = -1;
+  for (let k = pool.length - 1; k >= 0; k--) {
+    if (!ok(pool[k])) continue;
+    if (pool[k].broadcaster_id !== a.broadcaster_id) { j = k; break; }
+    if (j < 0) j = k;
+  }
+  if (j < 0) { counts[a.broadcaster_id]--; pool.push(a); return null; }
+  const b = pool.splice(j, 1)[0];
+  counts[b.broadcaster_id] = (counts[b.broadcaster_id] || 0) + 1;
+  return [a, b];
+}
+
+function show(id) {
+  ['start', 'game', 'end'].forEach(s => $(s).hidden = s !== id);
+  window.scrollTo(0, 0);
+}
+
+function startRound() {
+  counts = {};
+  pairs = [];
+  topSpare = [];
+  spare = shuffle(clips.slice());
+  let famous = null;
+  // minden körben 2 nagyon nézett (híres) klip, egymás ellen
+  if (clips.length >= TOP_POOL + 20) {
+    const top = clips.slice().sort((x, y) => y.view_count - x.view_count).slice(0, TOP_POOL);
+    const topIds = new Set(top.map(c => c.id));
+    topSpare = shuffle(top);
+    spare = spare.filter(c => !topIds.has(c.id));
+    famous = drawPair(topSpare, MAX_PER_STREAMER);
+    if (famous) famous.famous = true;
+  }
+  const total = famous ? ROUND - 1 : ROUND;
+  // ha túl kevés a streamer, a limitet fokozatosan emeli, hogy meglegyen a 10 párbaj
+  for (let cap = MAX_PER_STREAMER; pairs.length < total && cap <= ROUND * 2; cap++) {
+    let p;
+    while (pairs.length < total && (p = drawPair(spare, cap))) pairs.push(p);
+  }
+  if (famous) pairs.splice(Math.floor(Math.random() * (pairs.length + 1)), 0, famous);
+  idx = 0; locked = false;
+  show('game');
+  renderDuel();
+}
+
+function card(clip, other) {
+  const c = el('article', 'card');
+  const p = el('div', 'player');
+  const f = document.createElement('iframe');
+  f.src = 'https://clips.twitch.tv/embed?clip=' + encodeURIComponent(clip.id) + '&parent=' + location.hostname + '&autoplay=true&muted=true';
+  f.allowFullscreen = true;
+  f.allow = 'autoplay; fullscreen';
+  f.title = clip.title;
+  p.append(f);
+  const m = el('div', 'meta');
+  m.append(el('p', 'title', clip.title));
+  m.append(el('p', 'info', clip.broadcaster_name + ' • ' + clip.view_count.toLocaleString('hu-HU') + ' megtekintés'));
+  const b = el('button', 'pick', 'Ez tetszik jobban');
+  b.type = 'button';
+  b.addEventListener('click', () => choose(c, clip));
+  c.append(p, m, b);
+  return c;
+}
+
+function renderDuel() {
+  locked = false;
+  const [a, b] = pairs[idx];
+  $('label').textContent = 'Párbaj ' + (idx + 1) + ' / ' + pairs.length + (pairs[idx].famous ? ' • híres klipek' : '');
+  $('label').style.color = pairs[idx].famous ? 'var(--accent)' : '';
+  $('bar').style.width = (idx / pairs.length * 100) + '%';
+  const vs = el('div', 'vs', 'VS');
+  vs.setAttribute('aria-hidden', 'true');
+  $('arena').replaceChildren(card(a), vs, card(b));
+  $('skip').hidden = (pairs[idx].famous ? topSpare : spare).length < 2;
+}
+
+function choose(winnerCard, win) {
+  if (locked) return;
+  locked = true;
+  $('arena').querySelectorAll('.card').forEach(c => c.classList.add(c === winnerCard ? 'won' : 'lost'));
+  $('arena').querySelectorAll('.pick').forEach(b => b.disabled = true);
+  $('bar').style.width = ((idx + 1) / pairs.length * 100) + '%';
+  setTimeout(() => { idx++; idx < pairs.length ? renderDuel() : finish(); }, 800);
+}
+
+function finish() { show('end'); }
+
+$('go').addEventListener('click', startRound);
+$('again').addEventListener('click', startRound);
+$('skip').addEventListener('click', () => {
+  if (locked) return;
+  const old = pairs[idx];
+  old.forEach(c => counts[c.broadcaster_id]--);
+  const p = drawPair(old.famous ? topSpare : spare, MAX_PER_STREAMER);
+  if (!p) { old.forEach(c => counts[c.broadcaster_id]++); return; }
+  if (old.famous) p.famous = true;
+  pairs[idx] = p;
+  renderDuel();
+});
+
+fetch('clips.json', {cache: 'no-cache'})
+  .then(r => r.json())
+  .then(d => {
+    clips = d.filter(c => c && c.id);
+    if (clips.length < 4) throw new Error('kevés klip');
+    $('note').textContent = clips.length + ' klip van a készletben.';
+    $('go').disabled = false;
+  })
+  .catch(() => {
+    $('note').textContent = 'Még nincsenek klipek. Futtasd le az „Update clips” GitHub Actions workflowt, hogy létrejöjjön a clips.json.';
+  });
+</script>
+</body>
+</html>
