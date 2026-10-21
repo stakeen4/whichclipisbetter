@@ -80,7 +80,8 @@ const ROUND = 10;
 // Így a Twitch magas felbontást választ. Ha akad a lejátszás, vedd 1280 x 720-ra.
 const PLAYER_W = 1920, PLAYER_H = 1080;
 const TOP_POOL = 30;        // ennyi legnezettebb klipből kerül ki a kör 2 híres klipje
-const MAX_PER_STREAMER = 3;  // egy korben egy streamer legfeljebb ennyiszer szerepelhet
+const MAX_PER_STREAMER = 1;  // egy korben egy streamer legfeljebb ennyiszer szerepelhet
+const CAP_OVERRIDES = { psgogli7_official: 2 };  // kivételek: streamer neve kisbetűvel, és hány klipje lehet egy körben
 const $ = id => document.getElementById(id);
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
 let clips = [], pairs = [], spare = [], topSpare = [], counts = {}, idx = 0, locked = false;
@@ -92,8 +93,10 @@ const markSeen = pair => pair.forEach(c => seen.add(c.id));
 
 function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 
+const limitFor = (c, cap) => Math.max(cap, CAP_OVERRIDES[String(c.broadcaster_name).toLowerCase()] || 0);
+
 function drawPair(pool, cap) {
-  const ok = c => (counts[c.broadcaster_id] || 0) < cap;
+  const ok = c => (counts[c.broadcaster_id] || 0) < limitFor(c, cap);
   let i = pool.length - 1;
   while (i >= 0 && !ok(pool[i])) i--;
   if (i < 0) return null;
@@ -202,7 +205,7 @@ $('skip').addEventListener('click', () => {
   const old = pairs[idx];
   old.forEach(c => counts[c.broadcaster_id]--);
   const p = drawPair(old.famous ? topSpare : spare, MAX_PER_STREAMER);
-  if (!p) { old.forEach(c => counts[c.broadcaster_id]++); return; }
+  if (!p) { old.forEach(c => counts[c.broadcaster_id]++); $('skip').hidden = true; return; }
   if (old.famous) p.famous = true;
   markSeen(p);
   saveSeen();
