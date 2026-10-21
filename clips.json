@@ -72,7 +72,7 @@
   "title": "Streamer running around the settlement to report every single person he sees",
   "broadcaster_id": "147729812",
   "broadcaster_name": "KriszhAdvice",
-  "view_count": 46133,
+  "view_count": 46134,
   "created_at": "2021-10-23T00:01:53Z",
   "url": "https://www.twitch.tv/kriszhadvice/clip/LivelySmoggyTildeFailFish-zP8_4uMr_rLD6hSq",
   "famous": true
@@ -345,16 +345,6 @@
   "famous": true
  },
  {
-  "id": "MotionlessSpoopyBeeSMOrc-Jcz2TVdYkp-uYqGg",
-  "title": "hol a gucci ",
-  "broadcaster_id": "187552879",
-  "broadcaster_name": "DESH696",
-  "view_count": 17612,
-  "created_at": "2023-12-28T18:14:42Z",
-  "url": "https://www.twitch.tv/desh696/clip/MotionlessSpoopyBeeSMOrc-Jcz2TVdYkp-uYqGg",
-  "famous": true
- },
- {
   "id": "DeafSarcasticGoosePeteZaroll-eDhR84POkEEfgJZ2",
   "title": "Hogy tessék?",
   "broadcaster_id": "813998462",
@@ -389,7 +379,7 @@
   "title": "AURA",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 15026,
+  "view_count": 15027,
   "created_at": "2025-07-20T15:05:26Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/DistinctKindTubersMingLee-iKwsI6jkbzomkKrI",
   "famous": true
@@ -419,7 +409,7 @@
   "title": "Barni az asztal alatt vagyok",
   "broadcaster_id": "55087783",
   "broadcaster_name": "BarniGameplay",
-  "view_count": 13376,
+  "view_count": 13377,
   "created_at": "2025-06-04T15:45:05Z",
   "url": "https://www.twitch.tv/barnigameplay/clip/SweetTallFloofAMPTropPunch-Qe6wRi8DA5wCXjGO",
   "famous": true
@@ -459,7 +449,7 @@
   "title": "azta",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 11544,
+  "view_count": 11545,
   "created_at": "2026-08-01T19:07:20Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/LuckyArborealTeaPermaSmug-F5inCWxajasxoViB",
   "famous": true
@@ -498,7 +488,7 @@
   "title": "\"back to back totyt akarok\"",
   "broadcaster_id": "48297318",
   "broadcaster_name": "cristijAn",
-  "view_count": 11323,
+  "view_count": 11324,
   "created_at": "2023-01-28T10:54:22Z",
   "url": "https://www.twitch.tv/cristijan/clip/FlirtyOriginalOtterBIRB-uFF8HKQ8j1uQlcOR",
   "famous": true
@@ -528,7 +518,7 @@
   "title": "...",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 10637,
+  "view_count": 10638,
   "created_at": "2026-06-15T20:35:02Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/PatientDrabGarlicHumbleLife-Pytq9NTQuvafIebm",
   "famous": true
@@ -566,7 +556,7 @@
   "title": "asdasdasd",
   "broadcaster_id": "28604133",
   "broadcaster_name": "esport1tv",
-  "view_count": 9402,
+  "view_count": 9403,
   "created_at": "2017-10-14T18:15:05Z",
   "url": "https://www.twitch.tv/esport1tv/clip/ProductiveImportantMeerkatCoolStoryBob",
   "famous": true
@@ -634,7 +624,7 @@
   "title": "Frissitett taktika",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 8718,
+  "view_count": 8719,
   "created_at": "2023-01-07T18:52:25Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/ColdbloodedConfidentSlothFailFish-JO7Tro28UUDTYdEj"
  },
@@ -653,7 +643,7 @@
   "title": ".",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 8081,
+  "view_count": 8082,
   "created_at": "2026-08-01T19:06:29Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/MagnificentAmericanCroquetteDendiFace-ozVrFbbATSerTYqm"
  },
@@ -690,7 +680,7 @@
   "title": "Rodi felkérdez",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 7712,
+  "view_count": 7713,
   "created_at": "2025-11-02T13:50:43Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/SuperHeartlessBoarLitty-tkiooaX1_vnmuMhj"
  },
@@ -724,6 +714,16 @@
   "famous": true
  },
  {
+  "id": "TrappedNaiveNigiriFUNgineer",
+  "title": "Megcsúszott...",
+  "broadcaster_id": "28604133",
+  "broadcaster_name": "esport1tv",
+  "view_count": 7340,
+  "created_at": "2017-10-14T19:07:39Z",
+  "url": "https://www.twitch.tv/esport1tv/clip/TrappedNaiveNigiriFUNgineer",
+  "famous": true
+ },
+ {
   "id": "FlaccidBusyGoblinCurseLit",
   "title": "Tyson wtf?",
   "broadcaster_id": "147729812",
@@ -737,7 +737,7 @@
   "title": "bruh",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 7234,
+  "view_count": 7235,
   "created_at": "2025-07-20T14:54:28Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/FunnyConfidentCheeseTBTacoLeft-K6YuFfuPPcDGcm0V"
  },
@@ -773,7 +773,7 @@
   "title": "a csöcs",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 6945,
+  "view_count": 6946,
   "created_at": "2025-09-20T22:30:51Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/ExpensiveJazzyGalagoKreygasm-113l15TD1vHHXH9O"
  },
@@ -791,7 +791,7 @@
   "title": "majdnem nyalcsere",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 6545,
+  "view_count": 6546,
   "created_at": "2026-01-24T21:34:36Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/NurturingCrazyHorseradishAMPEnergyCherry-elJ4b2FwFB4VuJqi"
  },
@@ -836,7 +836,7 @@
   "title": "KESZTYŰŰŰ",
   "broadcaster_id": "55087783",
   "broadcaster_name": "BarniGameplay",
-  "view_count": 6387,
+  "view_count": 6388,
   "created_at": "2017-07-31T16:30:01Z",
   "url": "https://www.twitch.tv/barnigameplay/clip/DeliciousPlayfulArtichokePRChase"
  },
@@ -854,7 +854,7 @@
   "title": "lábtörés1",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 6239,
+  "view_count": 6240,
   "created_at": "2026-08-03T15:50:18Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/FunnyDrabBeeJKanStyle-TvocVVHeBDo4rA6u"
  },
@@ -881,7 +881,7 @@
   "title": "omg",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 5902,
+  "view_count": 5903,
   "created_at": "2025-09-25T17:52:51Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/CrazyLuckyRaccoonCoolCat-5lxkYW4TiT17t3MT"
  },
@@ -944,7 +944,7 @@
   "title": "matching polo",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 5456,
+  "view_count": 5457,
   "created_at": "2025-12-29T16:36:34Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/DaintyDeafAnteaterSMOrc-dfbNKvqeHZFH7buF"
  },
@@ -953,7 +953,7 @@
   "title": "Taktika",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 5283,
+  "view_count": 5284,
   "created_at": "2022-10-09T16:32:29Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/SmokyObservantPeafowlDogFace-5os_1rDh-qCzd-tW"
  },
@@ -971,7 +971,7 @@
   "title": "kis fing",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 5167,
+  "view_count": 5168,
   "created_at": "2026-08-02T07:08:31Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/SpicyDeliciousDinosaurSpicyBoy-F5YxBwYkzOACEeZb"
  },
@@ -980,7 +980,7 @@
   "title": "p",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 5150,
+  "view_count": 5151,
   "created_at": "2026-08-01T19:08:29Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/MushyRelatedVelociraptorPastaThat-nZ33ux08ltW9R41b"
  },
@@ -998,7 +998,7 @@
   "title": "xdddd",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 5144,
+  "view_count": 5145,
   "created_at": "2026-06-15T22:46:12Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/HealthyBashfulPoultryKappaRoss-lzjwiyLAAZZf0pl2"
  },
@@ -1025,7 +1025,7 @@
   "title": "ZACKEY MEGÖLTE NRG BENJYFISHY-T! ÉLŐBE!!!! ",
   "broadcaster_id": "249904227",
   "broadcaster_name": "zackey",
-  "view_count": 5019,
+  "view_count": 5020,
   "created_at": "2020-12-14T13:45:08Z",
   "url": "https://www.twitch.tv/zackey/clip/DifficultDignifiedTrollBrainSlug"
  },
@@ -1097,7 +1097,7 @@
   "title": "öleld meg",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 4860,
+  "view_count": 4861,
   "created_at": "2025-10-09T00:37:31Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/TastyClumsyWaffleKeyboardCat-ZiXtqoKluccf3gcA"
  },
@@ -1133,7 +1133,7 @@
   "title": "démon",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 4678,
+  "view_count": 4679,
   "created_at": "2022-07-15T23:44:31Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/CrunchyPiliableKangaroo4Head-8R84CfpYegW8u6Hb"
  },
@@ -1165,6 +1165,15 @@
   "url": "https://www.twitch.tv/rrgerike/clip/RockyWanderingSpaghettiGOWSkull-xhbB23WcrNEYJRG8"
  },
  {
+  "id": "OptimisticBoredZucchiniPhilosoraptor-dNsv2qhGVmhFSG1G",
+  "title": "3 fiú",
+  "broadcaster_id": "255201817",
+  "broadcaster_name": "rodrigorapport",
+  "view_count": 4454,
+  "created_at": "2025-10-09T01:15:55Z",
+  "url": "https://www.twitch.tv/rodrigorapport/clip/OptimisticBoredZucchiniPhilosoraptor-dNsv2qhGVmhFSG1G"
+ },
+ {
   "id": "DoubtfulSavageRutabagaJonCarnage-t8HWzSdVHceEtwCI",
   "title": "rage",
   "broadcaster_id": "813998462",
@@ -1172,15 +1181,6 @@
   "view_count": 4454,
   "created_at": "2022-10-01T19:39:50Z",
   "url": "https://www.twitch.tv/psgogli7_official/clip/DoubtfulSavageRutabagaJonCarnage-t8HWzSdVHceEtwCI"
- },
- {
-  "id": "OptimisticBoredZucchiniPhilosoraptor-dNsv2qhGVmhFSG1G",
-  "title": "3 fiú",
-  "broadcaster_id": "255201817",
-  "broadcaster_name": "rodrigorapport",
-  "view_count": 4453,
-  "created_at": "2025-10-09T01:15:55Z",
-  "url": "https://www.twitch.tv/rodrigorapport/clip/OptimisticBoredZucchiniPhilosoraptor-dNsv2qhGVmhFSG1G"
  },
  {
   "id": "ArborealTsunderePelicanCmonBruh",
@@ -1214,7 +1214,7 @@
   "title": "F1",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 4266,
+  "view_count": 4267,
   "created_at": "2025-07-20T15:30:45Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/AcceptableThankfulSardineMau5-sdqaUAbnPmlfzo2r"
  },
@@ -1223,7 +1223,7 @@
   "title": "fd",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 4219,
+  "view_count": 4220,
   "created_at": "2026-08-02T10:55:09Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/ImportantDepressedRamenRaccAttack-kORINzI1-KlTt6VL"
  },
@@ -1232,7 +1232,7 @@
   "title": "uuu petranak azert ott van",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 4142,
+  "view_count": 4143,
   "created_at": "2026-08-01T20:32:48Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/IgnorantBoringHornetUnSane-m2ZytKha380hcbwA"
  },
@@ -1268,7 +1268,7 @@
   "title": "sus",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 4000,
+  "view_count": 4001,
   "created_at": "2026-03-08T18:12:53Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/BadTenuousClintImGlitch-4BQFjus5j8gvswFh"
  },
@@ -1304,7 +1304,7 @@
   "title": "?",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 3845,
+  "view_count": 3846,
   "created_at": "2025-10-26T21:13:03Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/FrigidLittleMacaroniSoonerLater-PWxnDRh9PvXPAYKL"
  },
@@ -1331,7 +1331,7 @@
   "title": "kisssssssss",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 3814,
+  "view_count": 3815,
   "created_at": "2026-02-14T18:07:57Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/GoodJollyPancakePhilosoraptor-Gvq-RimUYAPtD0WO"
  },
@@ -1340,7 +1340,7 @@
   "title": "rodi hogy ul",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 3768,
+  "view_count": 3769,
   "created_at": "2026-06-01T09:50:57Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/PeacefulGenerousCroquettePoooound-AxNpyA4HEbSRf9Xz"
  },
@@ -1367,7 +1367,7 @@
   "title": "hang vagy a feny",
   "broadcaster_id": "255201817",
   "broadcaster_name": "rodrigorapport",
-  "view_count": 3632,
+  "view_count": 3633,
   "created_at": "2026-08-02T17:04:52Z",
   "url": "https://www.twitch.tv/rodrigorapport/clip/CrypticEvilCatEleGiggle-EouFweID3vUanNwn"
  },
@@ -1457,7 +1457,7 @@
   "title": "RAGE (PUBG",
   "broadcaster_id": "55087783",
   "broadcaster_name": "BarniGameplay",
-  "view_count": 3374,
+  "view_count": 3375,
   "created_at": "2018-03-14T16:52:42Z",
   "url": "https://www.twitch.tv/barnigameplay/clip/ClumsyAntediluvianLatteShadyLulu"
  },
@@ -1547,7 +1547,7 @@
   "title": "Elhúzom a függönyt 🥵🥵🥵",
   "broadcaster_id": "819574502",
   "broadcaster_name": "rrgerike",
-  "view_count": 3087,
+  "view_count": 3088,
   "created_at": "2024-07-15T13:19:19Z",
   "url": "https://www.twitch.tv/rrgerike/clip/ClumsyRudeGoatSquadGoals-IAqNUonCxQqkwQvV"
  },
@@ -1655,7 +1655,7 @@
   "title": "XDDDDDDDDDD",
   "broadcaster_id": "932212583",
   "broadcaster_name": "mrlovag",
-  "view_count": 2747,
+  "view_count": 2748,
   "created_at": "2026-06-29T18:22:26Z",
   "url": "https://www.twitch.tv/mrlovag/clip/BillowingNaiveWombatWOOP--HtSqCbeezeRcaaG"
  },
@@ -1718,7 +1718,7 @@
   "title": "fletcher csajozik",
   "broadcaster_id": "128837526",
   "broadcaster_name": "kittinaa",
-  "view_count": 2628,
+  "view_count": 2629,
   "created_at": "2026-06-22T02:37:46Z",
   "url": "https://www.twitch.tv/kittinaa/clip/FriendlyCuteGoblinPrimeMe-2diWUE8Fd40krGcX"
  },
@@ -1745,7 +1745,7 @@
   "title": "HE???????",
   "broadcaster_id": "55087783",
   "broadcaster_name": "BarniGameplay",
-  "view_count": 2576,
+  "view_count": 2577,
   "created_at": "2018-04-14T14:59:20Z",
   "url": "https://www.twitch.tv/barnigameplay/clip/TriumphantDreamyYogurtDogFace"
  },
@@ -1754,7 +1754,7 @@
   "title": "Ne rám dobd!",
   "broadcaster_id": "55087783",
   "broadcaster_name": "BarniGameplay",
-  "view_count": 2516,
+  "view_count": 2517,
   "created_at": "2018-03-16T18:19:16Z",
   "url": "https://www.twitch.tv/barnigameplay/clip/HotSpineySageUWot"
  },
@@ -1808,7 +1808,7 @@
   "title": "PRR",
   "broadcaster_id": "66996733",
   "broadcaster_name": "AdamKissAK",
-  "view_count": 2353,
+  "view_count": 2354,
   "created_at": "2025-04-02T22:51:03Z",
   "url": "https://www.twitch.tv/adamkissak/clip/EagerOnerousCobraMoreCowbell-AIbI-HHCGmog3UHz"
  },
@@ -1930,15 +1930,6 @@
   "url": "https://www.twitch.tv/karthas/clip/PricklyShakingBearOhMyDog-akvrS0e7J1bnMa4O"
  },
  {
-  "id": "IcyBenevolentTardigradeTwitchRaid-sh7i0lYBz31IMYaM",
-  "title": "barátnő",
-  "broadcaster_id": "249904227",
-  "broadcaster_name": "zackey",
-  "view_count": 2102,
-  "created_at": "2026-03-25T00:03:38Z",
-  "url": "https://www.twitch.tv/zackey/clip/IcyBenevolentTardigradeTwitchRaid-sh7i0lYBz31IMYaM"
- },
- {
   "id": "PhilanthropicObliviousRingCeilingCat-ePTN8bElzl9xCRyw",
   "title": "steel klipp",
   "broadcaster_id": "66996733",
@@ -1946,6 +1937,15 @@
   "view_count": 2102,
   "created_at": "2024-07-31T20:47:37Z",
   "url": "https://www.twitch.tv/adamkissak/clip/PhilanthropicObliviousRingCeilingCat-ePTN8bElzl9xCRyw"
+ },
+ {
+  "id": "IcyBenevolentTardigradeTwitchRaid-sh7i0lYBz31IMYaM",
+  "title": "barátnő",
+  "broadcaster_id": "249904227",
+  "broadcaster_name": "zackey",
+  "view_count": 2102,
+  "created_at": "2026-03-25T00:03:38Z",
+  "url": "https://www.twitch.tv/zackey/clip/IcyBenevolentTardigradeTwitchRaid-sh7i0lYBz31IMYaM"
  },
  {
   "id": "SnappyStormyClipzKippa-ejbbDuEESZuoQHVL",
@@ -2006,7 +2006,7 @@
   "title": "ott voltak a srácok?",
   "broadcaster_id": "1406699577",
   "broadcaster_name": "ChaosDuoIRL",
-  "view_count": 1996,
+  "view_count": 1997,
   "created_at": "2026-07-07T01:27:56Z",
   "url": "https://www.twitch.tv/chaosduoirl/clip/AveragePlainGarlicHeyGuys-txy5b_efYMNgZdn1"
  },
@@ -2015,7 +2015,7 @@
   "title": "Szokás szerint egy kis ez meg egy kis az",
   "broadcaster_id": "128837526",
   "broadcaster_name": "kittinaa",
-  "view_count": 1991,
+  "view_count": 1992,
   "created_at": "2022-12-21T17:08:21Z",
   "url": "https://www.twitch.tv/kittinaa/clip/DifferentOnerousNeanderthalStrawBeary-L6NclwIogYQvLvmi"
  },
@@ -2024,7 +2024,7 @@
   "title": "asd",
   "broadcaster_id": "128837526",
   "broadcaster_name": "kittinaa",
-  "view_count": 1963,
+  "view_count": 1964,
   "created_at": "2026-06-22T02:51:14Z",
   "url": "https://www.twitch.tv/kittinaa/clip/ObeseWiseDumplingsKevinTurtle-0NkOz71-PTeVgEIg"
  },
@@ -2141,7 +2141,7 @@
   "title": "herion a recskamester",
   "broadcaster_id": "48297318",
   "broadcaster_name": "cristijAn",
-  "view_count": 1782,
+  "view_count": 1783,
   "created_at": "2024-06-17T16:38:26Z",
   "url": "https://www.twitch.tv/cristijan/clip/AntediluvianSillyDonkeyBigBrother-mJysE9G_f9Zumc-B"
  },
@@ -2240,7 +2240,7 @@
   "title": "szakszerű munka",
   "broadcaster_id": "128837526",
   "broadcaster_name": "kittinaa",
-  "view_count": 1676,
+  "view_count": 1677,
   "created_at": "2026-06-22T02:34:27Z",
   "url": "https://www.twitch.tv/kittinaa/clip/PrettiestRelentlessPuppyWutFace-xHYj_icvwgUt4Hpv"
  },
@@ -2294,7 +2294,7 @@
   "title": "sperhi",
   "broadcaster_id": "128837526",
   "broadcaster_name": "kittinaa",
-  "view_count": 1639,
+  "view_count": 1640,
   "created_at": "2023-05-21T19:19:46Z",
   "url": "https://www.twitch.tv/kittinaa/clip/PlumpAgitatedPeanutMVGame-OAxKJBlz7zi38t_l"
  },
@@ -2339,7 +2339,7 @@
   "title": ".",
   "broadcaster_id": "48297318",
   "broadcaster_name": "cristijAn",
-  "view_count": 1582,
+  "view_count": 1583,
   "created_at": "2024-12-05T16:38:17Z",
   "url": "https://www.twitch.tv/cristijan/clip/BlushingMotionlessSoybeanBuddhaBar-cGjKIXpjZXvYTqZp"
  },
@@ -2357,7 +2357,7 @@
   "title": "Mikbe van a gyerek? XDDD",
   "broadcaster_id": "1406699577",
   "broadcaster_name": "ChaosDuoIRL",
-  "view_count": 1533,
+  "view_count": 1534,
   "created_at": "2026-08-09T21:52:22Z",
   "url": "https://www.twitch.tv/chaosduoirl/clip/SmoggyDelightfulCormorantBleedPurple-eTiGHxrAzUj23Zxj"
  },
@@ -2384,7 +2384,7 @@
   "title": "Hogy tessék?",
   "broadcaster_id": "44668355",
   "broadcaster_name": "luckeY",
-  "view_count": 1490,
+  "view_count": 1491,
   "created_at": "2026-10-05T16:47:22Z",
   "url": "https://www.twitch.tv/luckey/clip/SwissPopularWaffleWOOP-jibRboPII0boB1d0"
  },
@@ -2510,7 +2510,7 @@
   "title": "?",
   "broadcaster_id": "128837526",
   "broadcaster_name": "kittinaa",
-  "view_count": 1329,
+  "view_count": 1330,
   "created_at": "2023-06-21T17:40:44Z",
   "url": "https://www.twitch.tv/kittinaa/clip/CrispyDifferentSalamanderMVGame-OZIeTarhz--69u8Z"
  },
@@ -2614,15 +2614,6 @@
   "url": "https://www.twitch.tv/cristijan/clip/PunchySuaveAnteaterPipeHype-hVWgI67dSqiggNlY"
  },
  {
-  "id": "ArtsyEnchantingWebJebaited",
-  "title": "ÚÚÚÚÚJRA ITTHON - Squadozunk ma!",
-  "broadcaster_id": "55087783",
-  "broadcaster_name": "BarniGameplay",
-  "view_count": 1295,
-  "created_at": "2018-03-27T18:40:32Z",
-  "url": "https://www.twitch.tv/barnigameplay/clip/ArtsyEnchantingWebJebaited"
- },
- {
   "id": "PricklyPhilanthropicHippoOptimizePrime-h72d5WhjOeoNXjKB",
   "title": "ÁJVÉ definíció",
   "broadcaster_id": "51516226",
@@ -2630,6 +2621,15 @@
   "view_count": 1295,
   "created_at": "2024-09-02T11:17:18Z",
   "url": "https://www.twitch.tv/benccce/clip/PricklyPhilanthropicHippoOptimizePrime-h72d5WhjOeoNXjKB"
+ },
+ {
+  "id": "ArtsyEnchantingWebJebaited",
+  "title": "ÚÚÚÚÚJRA ITTHON - Squadozunk ma!",
+  "broadcaster_id": "55087783",
+  "broadcaster_name": "BarniGameplay",
+  "view_count": 1295,
+  "created_at": "2018-03-27T18:40:32Z",
+  "url": "https://www.twitch.tv/barnigameplay/clip/ArtsyEnchantingWebJebaited"
  },
  {
   "id": "PiercingNastyAsteriskRuleFive",
@@ -2672,7 +2672,7 @@
   "title": "SEGG",
   "broadcaster_id": "819574502",
   "broadcaster_name": "rrgerike",
-  "view_count": 1259,
+  "view_count": 1260,
   "created_at": "2026-07-28T19:10:02Z",
   "url": "https://www.twitch.tv/rrgerike/clip/CharmingOriginalCocoaHassaanChop-rMI0u9YlEfp3Rt7c"
  },
@@ -2717,7 +2717,7 @@
   "title": "kkk",
   "broadcaster_id": "128837526",
   "broadcaster_name": "kittinaa",
-  "view_count": 1185,
+  "view_count": 1186,
   "created_at": "2025-02-12T20:38:55Z",
   "url": "https://www.twitch.tv/kittinaa/clip/AmazonianGracefulTomatoPeoplesChamp-raIrPopE342aPKxV"
  },
@@ -2758,15 +2758,6 @@
   "url": "https://www.twitch.tv/cristijan/clip/LitigiousCaringAppleDendiFace-CXkslInn6VWnYNav"
  },
  {
-  "id": "SuspiciousPuzzledMosquitoPeoplesChamp-f-HsDfpntYS5UX3w",
-  "title": "xd",
-  "broadcaster_id": "50548499",
-  "broadcaster_name": "Karthas",
-  "view_count": 1175,
-  "created_at": "2022-08-19T13:52:47Z",
-  "url": "https://www.twitch.tv/karthas/clip/SuspiciousPuzzledMosquitoPeoplesChamp-f-HsDfpntYS5UX3w"
- },
- {
   "id": "DullBusyShrewHotPokket-wnT6ze3pgWYNtXek",
   "title": "fürdetés 0.1",
   "broadcaster_id": "128837526",
@@ -2783,6 +2774,15 @@
   "view_count": 1175,
   "created_at": "2026-07-22T14:24:39Z",
   "url": "https://www.twitch.tv/zackey/clip/EnticingGracefulJaguarDatSheffy-37Fy1IZJxLcNb6wi"
+ },
+ {
+  "id": "SuspiciousPuzzledMosquitoPeoplesChamp-f-HsDfpntYS5UX3w",
+  "title": "xd",
+  "broadcaster_id": "50548499",
+  "broadcaster_name": "Karthas",
+  "view_count": 1175,
+  "created_at": "2022-08-19T13:52:47Z",
+  "url": "https://www.twitch.tv/karthas/clip/SuspiciousPuzzledMosquitoPeoplesChamp-f-HsDfpntYS5UX3w"
  },
  {
   "id": "GlutenFreeMuddyPrariedogResidentSleeper-V9yxDrcHI1mkdoHW",
@@ -2807,7 +2807,7 @@
   "title": "kes",
   "broadcaster_id": "50548499",
   "broadcaster_name": "Karthas",
-  "view_count": 1166,
+  "view_count": 1167,
   "created_at": "2026-04-29T17:43:03Z",
   "url": "https://www.twitch.tv/karthas/clip/PlayfulEntertainingMoonSaltBae-eZ1KSK7UvnTkL3xW"
  },
@@ -2843,7 +2843,7 @@
   "title": "ki a tököm néz karthas streamet",
   "broadcaster_id": "44668355",
   "broadcaster_name": "luckeY",
-  "view_count": 1121,
+  "view_count": 1122,
   "created_at": "2025-02-17T20:49:41Z",
   "url": "https://www.twitch.tv/luckey/clip/ScrumptiousHyperLocustHumbleLife-AfyUhf4Jkp3cO9jl"
  },
@@ -2861,7 +2861,7 @@
   "title": "milyen lézert?",
   "broadcaster_id": "55087783",
   "broadcaster_name": "BarniGameplay",
-  "view_count": 1113,
+  "view_count": 1114,
   "created_at": "2018-03-04T12:55:06Z",
   "url": "https://www.twitch.tv/barnigameplay/clip/FurrySuaveMochaWutFace"
  },
@@ -2992,6 +2992,15 @@
   "url": "https://www.twitch.tv/kittinaa/clip/PopularRoundStingrayFrankerZ-N2bH_nE8F1Ywx_Lk"
  },
  {
+  "id": "AlluringPleasantKimchiTBTacoLeft-jhFYmgtP_ZI5wK-9",
+  "title": "Rövidke szombat",
+  "broadcaster_id": "128837526",
+  "broadcaster_name": "kittinaa",
+  "view_count": 1026,
+  "created_at": "2023-03-18T18:26:55Z",
+  "url": "https://www.twitch.tv/kittinaa/clip/AlluringPleasantKimchiTBTacoLeft-jhFYmgtP_ZI5wK-9"
+ },
+ {
   "id": "LivelyDignifiedAsparagusCeilingCat-VfCbmOMLj3Dg0j4K",
   "title": "Mi a munkád cody?",
   "broadcaster_id": "143502740",
@@ -3008,15 +3017,6 @@
   "view_count": 1025,
   "created_at": "2023-07-03T20:29:28Z",
   "url": "https://www.twitch.tv/konti1337/clip/RelentlessFlaccidGarbageCmonBruh-yiEo7s9yfK7Bs9A4"
- },
- {
-  "id": "AlluringPleasantKimchiTBTacoLeft-jhFYmgtP_ZI5wK-9",
-  "title": "Rövidke szombat",
-  "broadcaster_id": "128837526",
-  "broadcaster_name": "kittinaa",
-  "view_count": 1025,
-  "created_at": "2023-03-18T18:26:55Z",
-  "url": "https://www.twitch.tv/kittinaa/clip/AlluringPleasantKimchiTBTacoLeft-jhFYmgtP_ZI5wK-9"
  },
  {
   "id": "AttractivePhilanthropicAirGuitarGrammarKing-NZok1PZ3EfImZ1HJ",
