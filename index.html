@@ -84,6 +84,11 @@ const MAX_PER_STREAMER = 3;  // egy korben egy streamer legfeljebb ennyiszer sze
 const $ = id => document.getElementById(id);
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
 let clips = [], pairs = [], spare = [], topSpare = [], counts = {}, idx = 0, locked = false;
+const SEEN_KEY = 'klipvs-seen';
+let seen = new Set();
+try { seen = new Set(JSON.parse(localStorage.getItem(SEEN_KEY)) || []); } catch {}
+const saveSeen = () => { try { localStorage.setItem(SEEN_KEY, JSON.stringify([...seen].slice(-2000))); } catch {} };
+const markSeen = pair => pair.forEach(c => seen.add(c.id));
 
 function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 
@@ -114,15 +119,21 @@ function show(id) {
 function startRound() {
   counts = {};
   pairs = [];
-  topSpare = [];
-  spare = shuffle(clips.slice());
+  // híres klipek: a clips.json-ban "famous" jelölést kapott klipek (ha nincs, a legnézettebbek)
+  const flagged = clips.filter(c => c.famous);
+  const topPool = flagged.length >= 2 ? flagged
+    : clips.length >= TOP_POOL + 20 ? clips.slice().sort((x, y) => y.view_count - x.view_count).slice(0, TOP_POOL) : [];
+  const topIds = new Set(topPool.map(c => c.id));
+  const normalAll = clips.filter(c => !topIds.has(c.id));
+  // olyan klipeket választunk, amiket még nem láttál; ha elfogytak, újrakezdi a készletet
+  let fresh = normalAll.filter(c => !seen.has(c.id));
+  if (fresh.length < 30) { normalAll.forEach(c => seen.delete(c.id)); fresh = normalAll.slice(); }
+  let freshTop = topPool.filter(c => !seen.has(c.id));
+  if (freshTop.length < 2) { topPool.forEach(c => seen.delete(c.id)); freshTop = topPool.slice(); }
+  spare = shuffle(fresh);
+  topSpare = shuffle(freshTop);
   let famous = null;
-  // minden körben 2 nagyon nézett (híres) klip, egymás ellen
-  if (clips.length >= TOP_POOL + 20) {
-    const top = clips.slice().sort((x, y) => y.view_count - x.view_count).slice(0, TOP_POOL);
-    const topIds = new Set(top.map(c => c.id));
-    topSpare = shuffle(top);
-    spare = spare.filter(c => !topIds.has(c.id));
+  if (topPool.length >= 2) {
     famous = drawPair(topSpare, MAX_PER_STREAMER);
     if (famous) famous.famous = true;
   }
@@ -133,6 +144,8 @@ function startRound() {
     while (pairs.length < total && (p = drawPair(spare, cap))) pairs.push(p);
   }
   if (famous) pairs.splice(Math.floor(Math.random() * (pairs.length + 1)), 0, famous);
+  pairs.forEach(markSeen);
+  saveSeen();
   idx = 0; locked = false;
   show('game');
   renderDuel();
@@ -163,8 +176,7 @@ function card(clip, other) {
 function renderDuel() {
   locked = false;
   const [a, b] = pairs[idx];
-  $('label').textContent = 'Párbaj ' + (idx + 1) + ' / ' + pairs.length + (pairs[idx].famous ? ' • híres klipek' : '');
-  $('label').style.color = pairs[idx].famous ? 'var(--accent)' : '';
+  $('label').textContent = 'Párbaj ' + (idx + 1) + ' / ' + pairs.length;
   $('bar').style.width = (idx / pairs.length * 100) + '%';
   const vs = el('div', 'vs', 'VS');
   vs.setAttribute('aria-hidden', 'true');
@@ -192,6 +204,8 @@ $('skip').addEventListener('click', () => {
   const p = drawPair(old.famous ? topSpare : spare, MAX_PER_STREAMER);
   if (!p) { old.forEach(c => counts[c.broadcaster_id]++); return; }
   if (old.famous) p.famous = true;
+  markSeen(p);
+  saveSeen();
   pairs[idx] = p;
   renderDuel();
 });
